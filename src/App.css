@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #1c1c1c;
+  color: #eeee;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Hide horizontal overflow */
+  width: 100vw; /* Set the container width to 100% */
+  text-align: center;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    justify-content: center;
+    padding: 10px;
+  }
+}
+
+.container h1 {
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+section {
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px; /* Adjust margin as needed */
+}
+
+.skill-name {
+  width: 150px;
+}
+
+.bar {
+  width: 200px;
+  height: 20px;
+  background-color: #7292aa;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: #314f79;
+}
