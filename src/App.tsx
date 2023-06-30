@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./App.css"; // Import the CSS file for styling
-
+import Lottie, { LottieRefCurrentProps } from "lottie-react";
+import animationData from "./assests/computer.json";
+import "./App.css";
+import { useRef } from "react";
 const App = () => {
+  const computerRef = useRef<LottieRefCurrentProps>(null);
   const handleLocalGitClick = () => {
     window.location.replace("https://github.com/GuyKensdale/Local-Link");
   };
@@ -21,19 +24,32 @@ const App = () => {
   return (
     <div className="container">
       <h1>Guy Kensdale</h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="#experience">Technical Skills</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#about">About Me</a>
-          </li>
-        </ul>
-      </nav>
+      <h2>Full Stack Developer</h2>
+
+      <ul>
+        <li>
+          <a href="#experience">Technical Skills</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#about">About Me</a>
+        </li>
+      </ul>
+
+      <div className="lottie-container">
+        <div id="lottieAnimation">
+          <Lottie
+            onComplete={() => {
+              computerRef.current?.goToAndPlay(104, true);
+            }}
+            lottieRef={computerRef}
+            loop={false}
+            animationData={animationData}
+          />
+        </div>
+      </div>
 
       <section id="experience">
         <div className="skills">
@@ -103,8 +119,14 @@ const App = () => {
           many different platforms. Making all the information about a building
           or neighbourhood organised and accessible
         </p>
-        <button onClick={handleLocalGitClick}>GitHub Repo</button>
-        <button onClick={handleLocalVideoClick}>Video demo </button>
+        <div className="centreButton">
+          <button className="button-63" onClick={handleLocalGitClick}>
+            GitHub Repo
+          </button>
+          <button className="button-63" onClick={handleLocalVideoClick}>
+            Video demo{" "}
+          </button>
+        </div>
         <h3>Guys News</h3>
         <p>
           Guys News is a full stack project i created, allowing users to view
@@ -112,8 +134,14 @@ const App = () => {
           comments and up vote articles and these actions work directly with a
           back end psql database.as well as navigate through various articles.
         </p>
-        <button onClick={handleFENewsGitClick}>FE GitHub Repo</button>
-        <button onClick={handleBENewsGitClick}>BE GitHub Repo</button>
+        <div className="centreButton">
+          <button className="button-63" onClick={handleFENewsGitClick}>
+            FE GitHub Repo
+          </button>
+          <button className="button-63" onClick={handleBENewsGitClick}>
+            BE GitHub Repo
+          </button>
+        </div>
         <h3>Chat room</h3>
         <p>
           Chat room is as you might have guessed a chat room, this allows anyone
@@ -122,7 +150,11 @@ const App = () => {
           will share the same chat room however, this project is a great
           building block for and social media styled website or application.
         </p>
-        <button onClick={handleChatGitClick}>GitHub Repo</button>
+        <div className="centreButton">
+          <button className="button-63" onClick={handleChatGitClick}>
+            GitHub Repo
+          </button>
+        </div>
       </section>
       <section id="about">
         <h2>About Me</h2>

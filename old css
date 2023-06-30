@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1c1c1c;
+  color: #eeee;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Hide horizontal overflow */
+  width: 100vw; /* Set the container width to 100% */
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+section {
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px; /* Adjust margin as needed */
+}
+
+.skill-name {
+  width: 150px;
+}
+
+.bar {
+  width: 200px;
+  height: 20px;
+  background-color: #7292aa;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: #314f79;
+}
+.lottie-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (adjust as needed) */
+}
+
+#lottieAnimation {
+  position: relative;
+  top: 0;
+  left: 0;
+  max-height: 15px;
+  border-radius: 10px;
+  width: auto;
+  height: "70px;";
+}
