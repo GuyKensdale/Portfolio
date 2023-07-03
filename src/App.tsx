@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import animationData from "./assests/computer.json";
 import "./App.css";
 import { useRef } from "react";
+import useScrollSnap from "react-use-scroll-snap";
 const App = () => {
+  const scrollRef = useRef(null);
+  useScrollSnap({ ref: scrollRef, duration: 50, delay: 20 });
   const computerRef = useRef<LottieRefCurrentProps>(null);
   const handleLocalGitClick = () => {
     window.location.replace("https://github.com/GuyKensdale/Local-Link");
@@ -21,6 +24,7 @@ const App = () => {
   const handleChatGitClick = () => {
     window.location.replace("https://github.com/GuyKensdale/Chat-Spike-");
   };
+
   return (
     <div className="container">
       <h1>Guy Kensdale</h1>
@@ -51,62 +55,90 @@ const App = () => {
         </div>
       </div>
 
-      <section id="experience">
+      <section ref={scrollRef} id="experience">
+        <ul>
+          <li>
+            <a href="#experience">Technical Skills</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#about">About Me</a>
+          </li>
+        </ul>
+        <h2>Technical Skills</h2>
         <div className="skills">
-          <h2>Technical Skills</h2>
-          <div className="skill">
-            <h3 className="skill-name">LANGUAGES</h3>
-            <p>JavaScript</p>
-            <div className="bar">
-              <div className="bar-fill" style={{ width: "100%" }}></div>
-            </div>
-            <p>TypeScript</p>
-            <div className="bar">
-              <div className="bar-fill" style={{ width: "91%" }}></div>
-            </div>
-            <p>RSLogixs 500</p>
-            <div className="bar">
-              <div className="bar-fill" style={{ width: "74%" }}></div>
-            </div>
-          </div>
-          <div className="skill">
-            <h3 className="skill-name">FRONT END</h3>
-            <p>HTML</p>
-            <div className="bar">
-              <div className="bar-fill" style={{ width: "85%" }}></div>
-            </div>
-            <p>React</p>
-            <div className="bar">
-              <div className="bar-fill" style={{ width: "98%" }}></div>
-            </div>
-            <p>React-Native</p>
-            <div className="bar">
-              <div className="bar-fill" style={{ width: "94%" }}></div>
-            </div>
-            <p>CSS</p>
-            <div className="bar">
-              <div className="bar-fill" style={{ width: "80%" }}></div>
-            </div>
-            <p>Tailwind</p>
-            <div className="bar">
-              <div className="bar-fill" style={{ width: "75%" }}></div>
+          <div className="column">
+            <h3 className="skill-category">Languages</h3>
+            <div className="skill">
+              <p className="p-Tag">JavaScript</p>
+              <div className="bar">
+                <div className="bar-fill" style={{ width: "100%" }}></div>
+              </div>
+              <p className="p-Tag">TypeScript</p>
+              <div className="bar">
+                <div className="bar-fill" style={{ width: "91%" }}></div>
+              </div>
+              <p className="p-Tag">RSLogixs 500</p>
+              <div className="bar">
+                <div className="bar-fill" style={{ width: "74%" }}></div>
+              </div>
             </div>
           </div>
-          <div className="skill">
-            <h3 className="skill-name">BACK END</h3>
-            <p>SQL (PSQL)</p>
-            <div className="bar">
-              <div className="bar-fill" style={{ width: "100%" }}></div>
+          <div className="column">
+            <h3 className="skill-category">Front End</h3>
+            <div className="skill">
+              <p className="p-Tag">HTML</p>
+              <div className="bar">
+                <div className="bar-fill" style={{ width: "85%" }}></div>
+              </div>
+              <p className="p-Tag">React</p>
+              <div className="bar">
+                <div className="bar-fill" style={{ width: "98%" }}></div>
+              </div>
+              <p className="p-Tag">React-Native</p>
+              <div className="bar">
+                <div className="bar-fill" style={{ width: "94%" }}></div>
+              </div>
+              <p className="p-Tag">CSS</p>
+              <div className="bar">
+                <div className="bar-fill" style={{ width: "80%" }}></div>
+              </div>
+              <p className="p-Tag">Tailwind</p>
+              <div className="bar">
+                <div className="bar-fill" style={{ width: "75%" }}></div>
+              </div>
             </div>
-            <p>Firebase</p>
-            <div className="bar">
-              <div className="bar-fill" style={{ width: "99%" }}></div>
+          </div>
+          <div className="column">
+            <h3 className="skill-category">Back End</h3>
+            <div className="skill">
+              <p className="p-Tag">SQL (PSQL)</p>
+              <div className="bar">
+                <div className="bar-fill" style={{ width: "100%" }}></div>
+              </div>
+              <p className="p-Tag">Firebase</p>
+              <div className="bar">
+                <div className="bar-fill" style={{ width: "99%" }}></div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="projects">
+      <section ref={scrollRef} id="projects">
+        <ul>
+          <li>
+            <a href="#experience">Technical Skills</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#about">About Me</a>
+          </li>
+        </ul>
         <h2>Projects</h2>
         <h3>LocaLink</h3>
         <p>
@@ -156,7 +188,19 @@ const App = () => {
           </button>
         </div>
       </section>
-      <section id="about">
+
+      <section ref={scrollRef} id="about">
+        <ul>
+          <li>
+            <a href="#experience">Technical Skills</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#about">About Me</a>
+          </li>
+        </ul>
         <h2>About Me</h2>
         <p>
           Passionate about coding, I possess a profound curiosity for the
