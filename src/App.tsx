@@ -6,9 +6,14 @@ import "./App.css";
 import { useRef } from "react";
 import { VscGithub } from "react-icons/vsc";
 import { AiFillLinkedin } from "react-icons/ai";
+import { MdAlternateEmail } from "react-icons/md";
+import Typewriter from "typewriter-effect";
 
 const App = () => {
   const computerRef = useRef<LottieRefCurrentProps>(null);
+  const emailButtonClick = () => {
+    window.location.href = "mailto:Gkensdale@outlook.com";
+  };
   const handleLocalGitClick = () => {
     window.location.replace("https://github.com/GuyKensdale/Local-Link");
   };
@@ -38,8 +43,13 @@ const App = () => {
       <section id="homePage">
         <div className="homeHead">
           <h1>Guy Kensdale</h1>
-          <h2>Full Stack Developer</h2>
-
+          <div className="typewriter">
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter.typeString("Junior Full Stack Developer!").start();
+              }}
+            />
+          </div>
           <ul>
             <li>
               <a href="#experience">Technical Skills</a>
@@ -88,11 +98,11 @@ const App = () => {
               </div>
               <p className="p-Tag">TypeScript</p>
               <div className="bar">
-                <div className="bar-fill" style={{ width: "91%" }}></div>
+                <div className="bar-fill" style={{ width: "99%" }}></div>
               </div>
               <p className="p-Tag">RSLogixs 500</p>
               <div className="bar">
-                <div className="bar-fill" style={{ width: "74%" }}></div>
+                <div className="bar-fill" style={{ width: "78%" }}></div>
               </div>
             </div>
           </div>
@@ -101,19 +111,19 @@ const App = () => {
             <div className="skill">
               <p className="p-Tag">HTML</p>
               <div className="bar">
-                <div className="bar-fill" style={{ width: "85%" }}></div>
+                <div className="bar-fill" style={{ width: "98%" }}></div>
               </div>
               <p className="p-Tag">React</p>
               <div className="bar">
-                <div className="bar-fill" style={{ width: "98%" }}></div>
+                <div className="bar-fill" style={{ width: "100%" }}></div>
               </div>
               <p className="p-Tag">React-Native</p>
               <div className="bar">
-                <div className="bar-fill" style={{ width: "94%" }}></div>
+                <div className="bar-fill" style={{ width: "99%" }}></div>
               </div>
               <p className="p-Tag">CSS</p>
               <div className="bar">
-                <div className="bar-fill" style={{ width: "80%" }}></div>
+                <div className="bar-fill" style={{ width: "87%" }}></div>
               </div>
               <p className="p-Tag">Tailwind</p>
               <div className="bar">
@@ -130,7 +140,7 @@ const App = () => {
               </div>
               <p className="p-Tag">Firebase</p>
               <div className="bar">
-                <div className="bar-fill" style={{ width: "99%" }}></div>
+                <div className="bar-fill" style={{ width: "98%" }}></div>
               </div>
             </div>
           </div>
@@ -164,10 +174,18 @@ const App = () => {
           </p>
         </div>
         <div className="centreButton">
-          <button className="button-63" onClick={handleLocalGitClick}>
+          <button
+            className="button-63"
+            onClick={handleLocalGitClick}
+            title="GitHuB Repo"
+          >
             GitHub Repo
           </button>
-          <button className="button-63" onClick={handleLocalVideoClick}>
+          <button
+            className="button-63"
+            onClick={handleLocalVideoClick}
+            title="Video demonstration"
+          >
             Video demo{" "}
           </button>
         </div>
@@ -181,17 +199,25 @@ const App = () => {
           </p>
         </div>
         <div className="centreButton">
-          <button className="button-63" onClick={handleFENewsGitClick}>
+          <button
+            className="button-63"
+            onClick={handleFENewsGitClick}
+            title="GitHuB Repo"
+          >
             FE GitHub Repo
           </button>
-          <button className="button-63" onClick={handleBENewsGitClick}>
+          <button
+            className="button-63"
+            onClick={handleBENewsGitClick}
+            title="GitHuB Repo"
+          >
             BE GitHub Repo
           </button>
         </div>
         <h3>Chat room</h3>
         <div className="centrePTag">
           <p>
-            Chat room is as you might have guessed a chat room, this allows
+            Chat room is, as you might have guessed a chat room, this allows
             anyone with the repo to chat with display names rendered from a
             google sign in. the firebase back end is available on the GitHub
             meaning everyone will share the same chat room however, this project
@@ -200,7 +226,11 @@ const App = () => {
           </p>
         </div>
         <div className="centreButton">
-          <button className="button-63" onClick={handleChatGitClick}>
+          <button
+            className="button-63"
+            onClick={handleChatGitClick}
+            title="GitHuB Repo"
+          >
             GitHub Repo
           </button>
         </div>
@@ -237,13 +267,24 @@ const App = () => {
         </div>
         <ul>
           <li>
-            <button onClick={gitHubClick}>
+            <button className="button-63" onClick={gitHubClick} title="GitHuB">
               <VscGithub></VscGithub>
             </button>
           </li>
           <li>
-            <button onClick={linkedInCLick}>
+            <button
+              className="button-63"
+              onClick={linkedInCLick}
+              title="Linkedin"
+            >
               <AiFillLinkedin></AiFillLinkedin>
+            </button>
+            <button
+              className="button-63"
+              onClick={emailButtonClick}
+              title="Contact me"
+            >
+              <MdAlternateEmail></MdAlternateEmail>
             </button>
           </li>
         </ul>

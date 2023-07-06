@@ -1,14 +1,24 @@
+body {
+}
 .container {
-  background-color: #ffffffee;
-  color: #1c1c1c;
+  /* background-color: #190933; */
+  color: rgba(255, 255, 255, 0.932);
   justify-content: center;
-
+  background: url(./assests/conceptual-image-of-blue-smoke-isolated-on-dark-black-background-and-wooden-table-free-photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   align-items: center;
+  font-family: Arial, Arial, Helvetica, sans-serif;
 }
 .homeHead {
   padding-bottom: 0px;
   position: relative;
   z-index: 2;
+}
+.typewriter {
+  justify-content: center;
+  text-align: center;
+  font-size: 28px;
 }
 h1 {
   text-align: center;
@@ -54,18 +64,20 @@ html {
 section {
   height: 100vh;
   scroll-snap-align: start;
+  max-height: 100%;
 }
 .bar {
   width: 200px;
   height: 23px;
-  background-color: #7292aa;
+  background-color: #7bc4fc;
   overflow: hidden;
   margin: 0px;
+  border-radius: 30px;
 }
 
 .bar-fill {
   height: 100%;
-  background-color: #314f79;
+  background-color: #023ec0;
 }
 .buttonContainer {
   justify-content: center;
@@ -94,20 +106,6 @@ section {
   vertical-align: middle;
   z-index: 0;
 }
-/* .lottie-container {
-  position: absolute;
-  width: 100%;
-  height: calc(100vh - 20px); 
-  max-height: 56.25vw; 
-} */
-
-/* #lottieAnimation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-} */
 
 .centreButton {
   display: flex;
