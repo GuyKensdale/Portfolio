@@ -49,7 +49,7 @@ const App = () => {
           <div className="typewriter">
             <Typewriter
               onInit={(typewriter) => {
-                typewriter.typeString("Junior Full Stack Developer!").start();
+                typewriter.typeString("Junior Full Stack Developer").start();
               }}
             />
           </div>
