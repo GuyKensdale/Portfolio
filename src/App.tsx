@@ -37,6 +37,9 @@ const App = () => {
       "https://www.linkedin.com/in/guy-kensdale-805829145/"
     );
   };
+  const handleNewsClick = () => {
+    window.location.replace("https://guys-news.netlify.app/");
+  };
 
   return (
     <div className="container">
@@ -163,14 +166,16 @@ const App = () => {
         <h3>LocaLink</h3>
         <div className="centrePTag">
           <p>
-            LocaLink is a mobile app I have co-created to unite people living in
-            the same area or buildings without the hassle of sharing personal
-            information, such as email or phone number, with people you don’t
-            know or have just met, which is often the case on other social media
-            platforms. LocaLink aims to be the one-stop shop for online
-            community interaction, avoiding the need for several groups and
-            pages across many different platforms. Making all the information
-            about a building or neighbourhood organised and accessible
+            LocaLink is a co-created mobile app designed to connect individuals
+            residing in the same area or buildings. Unlike other social media
+            platforms, LocaLink prioritizes privacy by eliminating the need to
+            share personal information such as email or phone numbers with
+            unknown or newly met individuals. Acting as a one-stop-shop for
+            online community interaction, LocaLink eliminates the need for
+            multiple groups and pages across various platforms. It provides
+            organized and accessible information about buildings or
+            neighborhoods, fostering a sense of community and facilitating
+            seamless communication.
           </p>
         </div>
         <div className="centreButton">
@@ -192,10 +197,17 @@ const App = () => {
         <h3>Guys News</h3>
         <div className="centrePTag">
           <p>
-            Guys News is a full stack project i created, allowing users to view
-            news articles from a home page, within this website you can leave
-            comments and up vote articles and these actions work directly with a
-            back end psql database.as well as navigate through various articles.
+            Guys News is a full-stack project that enables users to access and
+            interact with news articles. The user-friendly website allows
+            browsing of articles and includes user authentication,
+            authorization, and profiles. Users can leave comments and upvote
+            articles, and real-time updates are stored in a PostgreSQL database.
+            The platform is designed to be responsive and accessible across
+            devices. Social sharing buttons increase article visibility. The
+            project prioritizes performance optimization, error handling, and
+            automated testing to ensure reliability and stability. With Guys
+            News, users can explore, interact with, and stay informed about news
+            articles in a secure and engaging platform.
           </p>
         </div>
         <div className="centreButton">
@@ -208,6 +220,13 @@ const App = () => {
           </button>
           <button
             className="button-63"
+            onClick={handleNewsClick}
+            title="Live Website"
+          >
+            Website
+          </button>
+          <button
+            className="button-63"
             onClick={handleBENewsGitClick}
             title="GitHuB Repo"
           >
@@ -217,12 +236,15 @@ const App = () => {
         <h3>Chat room</h3>
         <div className="centrePTag">
           <p>
-            Chat room is, as you might have guessed a chat room, this allows
-            anyone with the repo to chat with display names rendered from a
-            google sign in. the firebase back end is available on the GitHub
-            meaning everyone will share the same chat room however, this project
-            is a great building block for and social media styled website or
-            application.
+            Chat Room is a chat application that provides a platform for users
+            to engage in real-time conversations. Users can sign in using their
+            Google account, and their display names are rendered based on their
+            Google sign-in information. The Firebase backend, available on
+            GitHub, ensures that all users share the same chat room. This
+            project serves as a solid foundation for developing social
+            media-styled websites or applications. By leveraging the
+            functionalities of Chat Room, developers can build upon it to create
+            more extensive and feature-rich social media platforms.
           </p>
         </div>
         <div className="centreButton">
@@ -251,18 +273,24 @@ const App = () => {
         <h2>About Me</h2>
         <div className="centrePTag">
           <p>
-            Passionate about coding, I possess a profound curiosity for the
-            intricacies of binary and the fundamental principles of programming.
-            With expertise in TypeScript, React, and React Native, I specialize
-            as a versatile full-stack coder. My drive to overcome obstacles and
-            develop efficient code fuels my satisfaction in bringing innovative
-            solutions to life. Notably, I contributed to the successful
-            development of the "Local Link" app, implementing tailored features
-            for diverse user types. Collaborating with fellow developers has
-            enriched my perspective and deepened my understanding of coding.
-            Eager to embrace evolving challenges, I am dedicated to a long-term
-            coding career, continuously learning, growing, and transforming
-            ideas into reality
+            Welcome to my portfolio! I'm passionate about coding and have a deep
+            curiosity for the intricacies of binary and the fundamental
+            principles of programming. With expertise in TypeScript, React, and
+            React Native, I specialize as a versatile full-stack coder. What
+            drives me is the satisfaction of overcoming obstacles and developing
+            efficient code to bring innovative solutions to life. I've had the
+            privilege of contributing to the successful development of the
+            "Local Link" app, where I implemented tailored features for diverse
+            user types. Collaborating with fellow developers has enriched my
+            perspective and deepened my understanding of coding. I am dedicated
+            to a long-term coding career, continuously learning, growing, and
+            transforming ideas into reality. Embracing evolving challenges
+            excites me, and I'm always eager to take on new projects and expand
+            my skillset. Feel free to explore my portfolio and get in touch if
+            you have any questions or potential collaborations. I look forward
+            to connecting and creating amazing things together! If you have any
+            specific questions or further details you'd like to include, please
+            let me know, and I'll be happy to assist you further!
           </p>
         </div>
         <ul>
