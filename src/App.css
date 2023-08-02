@@ -1,7 +1,6 @@
 body {
 }
 .container {
-  /* background-color: #190933; */
   color: rgba(255, 255, 255, 0.932);
   justify-content: center;
   background: url(./assests/conceptual-image-of-blue-smoke-isolated-on-dark-black-background-and-wooden-table-free-photo.jpg);
@@ -21,6 +20,7 @@ body {
   font-size: 28px;
 }
 h1 {
+  margin-top: 0px;
   text-align: center;
   padding: 0;
 }
