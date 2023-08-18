@@ -67,3 +67,27 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+@media screen and (max-width: 320px) {
+  /* comes into effect for screens less than or equal to 320 pixels */
+  .body {
+    width: 110px;
+    height: 100vh;
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  /* comes into effect for screens between 321 and 480 pixels (inclusive) */
+  .body {
+    width: 310px;
+    height: 100vh;
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* comes into effect for screens larger than or equal to 481 pixels */
+  .body {
+    width: 490px;
+    height: 100vh;
+    font-size: 10px;
+  }
+}

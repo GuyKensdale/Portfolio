@@ -19,6 +19,12 @@ const Projects = () => {
   const handleNewsClick = () => {
     window.location.replace("https://guys-news.netlify.app/");
   };
+  const handleHangGitClick = () => {
+    window.location.replace("https://github.com/GuyKensdale/Hang-Man");
+  };
+  const handleHangHostClick = () => {
+    window.location.replace("https://hang-man-by-guy-kensdale.netlify.app/");
+  };
   return (
     <div className="ProjectsCon">
       <section id="projects">
@@ -63,6 +69,38 @@ const Projects = () => {
             title="Video demonstration"
           >
             Video demo{" "}
+          </button>
+        </div>
+        <h3>Hang Man</h3>
+        <div className="centrePTag">
+          <p>
+            Through this react web app i have been able to showcase my
+            proficiency in component-based architecture, state management, and
+            user interaction. Leveraging Firebase, I integrated a real-time
+            leader board to enhance competitiveness. I wanted to remake this
+            classic as a first look into coding games, through this i quickly
+            noticed the issues that can be presented when creating a interactive
+            game, This project, although rather basic in principle, definitely
+            taught me a lot in terms of UI/UX design and proactive bug fixing as
+            well as anticipating potential user interactions that could
+            challenge or exploit the game, which enhanced my problem-solving
+            skills and attention to detail.
+          </p>
+        </div>
+        <div className="centreButton">
+          <button
+            className="button-63"
+            onClick={handleHangGitClick}
+            title="GitHuB Repo"
+          >
+            GitHub Repo
+          </button>
+          <button
+            className="button-63"
+            onClick={handleHangHostClick}
+            title="GitHuB Repo"
+          >
+            Play the game
           </button>
         </div>
         <h3>Guys News</h3>
